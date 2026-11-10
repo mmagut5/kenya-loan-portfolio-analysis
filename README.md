@@ -41,18 +41,18 @@ Key columns: `loan_id`, `disbursement_date`, `county` (18 counties), `business_s
 ## Key findings
 **Portfolio health:** outstanding principal is KES 296.8M. PAR30 is **20.3%** and the NPL ratio is **15.7%**. Estimated provisions are KES 34.4M, only **11.6%** of the book, below the NPL ratio, which signals a provisioning gap.
 
-![Risk class mix](charts/risk_class_mix.png)
+!
 
 1. **Credit score is the strongest separator.** Loans with CRB scores of 300-500 default at **19.7%**, against **1.3%** for scores of 726-850. The 300-500 band holds 297 active loans worth KES 33.4M with a 33.4% NPL ratio.
-   ![By score band](charts/npl_by_score_band.png)
+   ![By score band](npl_by_score_band.png)
 2. **Affordability matters.** Loans where the installment is **over 35% of income** have a **12.2%** default rate, against **3.7%** when it is under 15%. These loans make up about 54% of the outstanding balance (KES 159.4M).
 3. **Sector risk differs sharply.** Agriculture (30.7% NPL ratio), Services (23.8%) and Retail (22.6%) are the weakest. Transport (boda boda / matatu) carries the **largest exposure at KES 133.5M** with a 15.0% NPL ratio, so a shock there would hurt most.
-   ![By sector](charts/npl_by_sector.png)
+   ![By sector](npl_by_sector.png)
 4. **County differences.** Kitui (32.2%), Kisii (27.7%) and Nyeri (24.8%) have the highest NPL ratios; Narok (6.6%), Uasin Gishu (8.3%) and Kericho (8.9%) the lowest. Several counties have fewer than 100 active loans, so treat county rankings as indicative.
-   ![By county](charts/npl_by_county.png)
+   ![By county](npl_by_county.png)
 5. **Collateral and channel.** Personal-guarantor loans have a 25.2% NPL ratio and loans with no collateral 22.5%, versus 11.4% for logbook-secured and 16.4% for title-deed loans. Payroll check-off loans have the lowest default rate (1.0%).
 6. **Cohort (vintage) effect.** Loans disbursed between 2023 Q3 and 2024 Q2 show default rates of 9.3-11.8%, above the later cohorts. The newest cohorts (2025 Q2-Q3) look clean mainly because they have not yet had time to default.
-   ![Vintage](charts/npl_by_vintage.png)
+   ![Vintage](npl_by_vintage.png)
 
 ## Recommendations
 1. Set a minimum CRB score (or require extra security) for scores below 500, and tighten approval for 501-575.
@@ -69,12 +69,7 @@ Key columns: `loan_id`, `disbursement_date`, `county` (18 counties), `business_s
 - Provision rates are illustrative, not an official IFRS 9 or CBK calculation.
 - Small counties and young cohorts have few observations.
 
-## Learn the code
-`loan_portfolio_analysis_notebook.ipynb` walks through the whole analysis step by step with explanations, a groupby primer, practice questions and interview prompts.
 
-## How to run
-```bash
-pip install pandas numpy matplotlib
-python scripts/01_generate_data.py        # builds data/raw_loans.csv
-python scripts/02_clean_and_analyse.py    # builds clean data, tables/ and charts/
-```
+`loan_portfolio_analysis_notebook.ipynb` walks through the whole analysis step by step with explanations, 
+
+
